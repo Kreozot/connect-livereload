@@ -1,10 +1,10 @@
 module.exports = function livereload(opt) {
   // options
   opt = opt || {};
-  var ignore = opt.ignore || opt.excludeList || [/\.js(\?.*)?$/, /\.css(\?.*)?$/, /\.svg(\?.*)?$/, /\.ico(\?.*)?$/,
-    /\.woff(\?.*)?$/, /\.png(\?.*)?$/, /\.jpg(\?.*)?$/, /\.jpeg(\?.*)?$/, /\.gif(\?.*)?$/, /\.pdf(\?.*)?$/,
-    /\.json(\?.*)?$/
-  ];
+  var excludeExtensions = ['js', 'css', 'svg', 'ico', 'woff', 'png', 'jpg', 'jpeg', 'gif', 'pdf', 'json'];
+  var ignore = opt.ignore || opt.excludeList || excludeExtensions.map(function (ext) {
+	  return new RegExp('\\.' + ext + '(\\?.*)?$');
+  });
 
   var include = opt.include || [/.*/];
   var html = opt.html || _html;
