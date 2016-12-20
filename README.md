@@ -60,7 +60,8 @@ These are the available options with the following defaults:
   // regex: any expression: e.g. starts with pattern: /^.../ ends with pattern: /...$/
   ignore: [
     /\.js(\?.*)?$/, /\.css(\?.*)?$/, /\.svg(\?.*)?$/, /\.ico(\?.*)?$/, /\.woff(\?.*)?$/,
-    /\.png(\?.*)?$/, /\.jpg(\?.*)?$/, /\.jpeg(\?.*)?$/, /\.gif(\?.*)?$/, /\.pdf(\?.*)?$/
+    /\.png(\?.*)?$/, /\.jpg(\?.*)?$/, /\.jpeg(\?.*)?$/, /\.gif(\?.*)?$/, /\.pdf(\?.*)?$/,
+    /\.zip(\?.*)?$/, /\.rar(\?.*)?$/, /\.tar(\?.*)?$/, /\.gz(\?.*)?$/
   ],
 
   // include all urls by default
