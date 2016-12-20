@@ -1,7 +1,7 @@
 module.exports = function livereload(opt) {
   // options
   opt = opt || {};
-  var excludeExtensions = ['js', 'css', 'svg', 'ico', 'woff', 'png', 'jpg', 'jpeg', 'gif', 'pdf', 'json'];
+  var excludeExtensions = ['js', 'css', 'svg', 'ico', 'woff', 'png', 'jpg', 'jpeg', 'gif', 'pdf', 'json', 'zip', 'rar', 'tar', 'gz'];
   var ignore = opt.ignore || opt.excludeList || excludeExtensions.map(function (ext) {
 	  return new RegExp('\\.' + ext + '(\\?.*)?$');
   });
